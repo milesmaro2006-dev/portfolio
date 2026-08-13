@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpiderForge | Amr Shaban</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-detail {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .project-detail h1 { font-size: 2.2rem; margin-bottom: 8px; }
+        .project-detail .meta { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 30px; border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+        .project-detail h2 { font-size: 1.6rem; margin-top: 40px; margin-bottom: 12px; color: var(--accent); }
+        .project-detail h3 { font-size: 1.2rem; margin-top: 24px; margin-bottom: 8px; color: #fff; }
+        .project-detail p { color: var(--text-secondary); margin-bottom: 12px; line-height: 1.7; }
+        .project-detail ul { color: var(--text-secondary); padding-left: 24px; margin-bottom: 12px; }
+        .project-detail li { margin-bottom: 6px; }
+        .project-detail .tech-tag { display: inline-block; background: var(--bg-card); color: var(--text-secondary); padding: 2px 12px; border-radius: 12px; font-size: 0.75rem; border: 1px solid var(--border); margin: 0.2rem; }
+        .project-detail .back-link { display: inline-block; margin-top: 40px; }
+        .project-detail .architecture-diagram { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px; text-align: center; margin: 20px 0; font-family: 'Fira Code', monospace; color: var(--text-secondary); }
+    </style>
+</head>
+<body>
+
+    <!-- ===== Navigation ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Amr<span>Shaban</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="writeups.html">Write-ups</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== Project Detail ===== -->
+    <section class="section" style="padding-top:120px;">
+        <div class="container">
+            <div class="project-detail">
+
+                <a href="projects.html" class="back-link btn-outline btn-sm">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+
+                <h1>🕷️ SpiderForge</h1>
+                <div class="meta">
+                    <span><i class="fas fa-tag"></i> Web Pentest Automation Platform</span>
+                    <span style="margin-left:16px;"><i class="fas fa-calendar"></i> 2026</span>
+                    <span style="margin-left:16px;"><i class="fas fa-code"></i> Python</span>
+                </div>
+
+                <h2>Overview</h2>
+                <p>
+                    SpiderForge is an automated web security assessment platform designed to help penetration testers 
+                    reduce manual reconnaissance time. It automates repetitive tasks like crawling, endpoint discovery, 
+                    and initial vulnerability assessment.
+                </p>
+
+                <h2>Problem</h2>
+                <p>
+                    Web penetration testing requires significant manual effort in reconnaissance and endpoint discovery. 
+                    Penetration testers spend a large portion of their time on repetitive tasks rather than focusing on 
+                    complex exploitation.
+                </p>
+
+                <h2>Solution</h2>
+                <p>
+                    SpiderForge automates the reconnaissance phase of web penetration testing, allowing testers to focus 
+                    on vulnerability discovery and exploitation.
+                </p>
+
+                <h2>Architecture</h2>
+                <div class="architecture-diagram">
+                    <pre style="text-align:left;color:var(--text-secondary);">
+┌─────────────────────────────────────────────────────┐
+│                    SpiderForge                       │
+├─────────────────────────────────────────────────────┤
+│  Reconnaissance  →  Discovery  →  Enumeration      │
+│       ↓               ↓              ↓              │
+│  Security Tests  →  Findings    →  Reporting       │
+├─────────────────────────────────────────────────────┤
+│  Technologies: Python • Scrapy • Flask • SQLite    │
+└─────────────────────────────────────────────────────┘
+                    </pre>
+                </div>
+
+                <h2>Technologies</h2>
+                <div>
+                    <span class="tech-tag">Python 3.8+</span>
+                    <span class="tech-tag">Scrapy</span>
+                    <span class="tech-tag">Requests</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">SQLite</span>
+                    <span class="tech-tag">OWASP Top 10</span>
+                </div>
+
+                <h2>Key Features</h2>
+                <ul>
+                    <li><strong>Dynamic Web Crawling:</strong> Automatically discovers attack surface in modern web applications</li>
+                    <li><strong>Endpoint Discovery:</strong> Identifies hidden APIs and endpoints</li>
+                    <li><strong>Vulnerability Assessment:</strong> Framework for detecting OWASP Top 10 vulnerabilities</li>
+                    <li><strong>Authentication Automation:</strong> Handles complex authentication flows</li>
+                    <li><strong>False Positive Reduction:</strong> Advanced analysis to minimize false positives</li>
+                    <li><strong>Reporting Module:</strong> Generates professional penetration test reports</li>
+                </ul>
+
+                <h2>Workflow</h2>
+                <ol>
+                    <li><strong>Reconnaissance:</strong> Gather information about the target</li>
+                    <li><strong>Endpoint Discovery:</strong> Find all accessible endpoints and APIs</li>
+                    <li><strong>Enumeration:</strong> Analyze discovered endpoints for potential vulnerabilities</li>
+                    <li><strong>Security Testing:</strong> Execute automated security checks</li>
+                    <li><strong>Findings:</strong> Collect and analyze detected vulnerabilities</li>
+                    <li><strong>Reporting:</strong> Generate comprehensive security report</li>
+                </ol>
+
+                <h2>Lessons Learned</h2>
+                <ul>
+                    <li>Understanding modern web application architectures is crucial for effective crawling</li>
+                    <li>Handling authentication flows is one of the biggest challenges in automated testing</li>
+                    <li>False positive reduction is critical for maintaining trust in automated tools</li>
+                </ul>
+
+                <h2>Future Improvements</h2>
+                <ul>
+                    <li>Machine learning-based vulnerability detection</li>
+                    <li>API fuzzing capabilities</li>
+                    <li>Integration with CI/CD pipelines</li>
+                    <li>Enhanced reporting with visualizations</li>
+                </ul>
+
+                <div style="margin-top:30px;display:flex;gap:10px;flex-wrap:wrap;">
+                    <a href="https://github.com/milesmaro2006-dev/SpiderForge" target="_blank" class="btn-primary"><i class="fab fa-github"></i> View Repository</a>
+                    <a href="projects.html" class="btn-outline"><i class="fas fa-arrow-left"></i> All Projects</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/milesmaro2006-dev" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/amr-shaban-2465153a6" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://tryhackme.com/p/Amrshaban2006" target="_blank"><i class="fas fa-user-secret"></i></a>
+                <a href="mailto:[your-email]"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2026 Amr Shaban Sayed. Built with <span class="heart">❤</span> for Offensive Security.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
