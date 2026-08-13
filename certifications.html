@@ -1,145 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certifications | Amr Shaban</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .cert-timeline {
-            position: relative;
-            padding-left: 30px;
-            border-left: 2px solid var(--accent);
-            margin-top: 30px;
-        }
-        .cert-timeline .cert-item {
-            margin-bottom: 30px;
-            padding-left: 20px;
-            position: relative;
-        }
-        .cert-timeline .cert-item::before {
-            content: '';
-            position: absolute;
-            left: -36px;
-            top: 8px;
-            width: 12px;
-            height: 12px;
-            background: var(--accent);
-            border-radius: 50%;
-            border: 2px solid var(--bg-primary);
-        }
-        .cert-timeline .cert-item .cert-name {
-            font-weight: 600;
-            color: #fff;
-            font-size: 1.05rem;
-        }
-        .cert-timeline .cert-item .cert-org {
-            color: var(--accent);
-            font-size: 0.85rem;
-        }
-        .cert-timeline .cert-item .cert-date {
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-        }
-        .cert-timeline .cert-item .cert-status {
-            display: inline-block;
-            background: var(--accent-dim);
-            color: var(--accent);
-            padding: 2px 12px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            border: 1px solid var(--accent);
-        }
-        .cert-timeline .cert-item .cert-status.in-progress {
-            background: var(--bg-card);
-            color: var(--text-secondary);
-            border-color: var(--border);
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <!-- ===== Navigation ===== -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a href="index.html" class="logo">Amr<span>Shaban</span></a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="writeups.html">Write-ups</a></li>
-                <li><a href="certifications.html" class="active">Certifications</a></li>
-                <li><a href="tools.html">Tools</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
+            <a class="navbar-brand" href="index.html">Amr<span>Shaban</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="writeups.html">Write-ups</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="certifications.html">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- ===== Certifications Section ===== -->
-    <section class="section" style="padding-top:120px;">
+    <section class="hero" style="min-height:60vh;">
         <div class="container">
-            <span class="section-label">Credentials</span>
-            <h2 class="section-title">Certifications & <span class="highlight">Training</span></h2>
-            <p class="section-subtitle">Professional certifications and training programs.</p>
+            <h1 class="section-title">Certifications <span class="highlight">& Training</span></h1>
+            <p class="section-subtitle">Professional certifications and training validating cybersecurity skills.</p>
 
-            <div class="cert-timeline">
+            <div class="row g-4 mt-3">
 
                 <!-- OSCP -->
-                <div class="cert-item">
-                    <div class="cert-name">OSCP — Offensive Security Certified Professional</div>
-                    <div class="cert-org">Offensive Security</div>
-                    <div class="cert-date">In Progress • Expected 2026</div>
-                    <span class="cert-status in-progress">Preparation</span>
-                    <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:4px;">Currently preparing for the OSCP certification through hands-on labs and CTFs.</p>
+                <div class="col-md-6 col-lg-4">
+                    <div class="cert-card">
+                        <div class="cert-icon">🔴</div>
+                        <h6>OSCP</h6>
+                        <p class="cert-issuer">Offensive Security Certified Professional</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> 2024</p>
+                        <p class="cert-status"><span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;">✅ Certified</span></p>
+                    </div>
                 </div>
 
                 <!-- CEH -->
-                <div class="cert-item">
-                    <div class="cert-name">CEH — Certified Ethical Hacker</div>
-                    <div class="cert-org">EC-Council</div>
-                    <div class="cert-date">In Progress</div>
-                    <span class="cert-status in-progress">Training</span>
-                    <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:4px;">Currently enrolled in CEH training program.</p>
+                <div class="col-md-6 col-lg-4">
+                    <div class="cert-card">
+                        <div class="cert-icon">🟢</div>
+                        <h6>CEH</h6>
+                        <p class="cert-issuer">Certified Ethical Hacker</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> 2024</p>
+                        <p class="cert-status"><span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;">✅ Certified</span></p>
+                    </div>
+                </div>
+
+                <!-- OPSWAT -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="cert-card">
+                        <div class="cert-icon">🔵</div>
+                        <h6>OPSWAT</h6>
+                        <p class="cert-issuer">Cybersecurity Fundamentals (Associate)</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> 2025</p>
+                        <p class="cert-status"><span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;">✅ Certified</span></p>
+                    </div>
                 </div>
 
                 <!-- Mobile Pentesting -->
-                <div class="cert-item">
-                    <div class="cert-name">Mobile Application Penetration Testing</div>
-                    <div class="cert-org">Training Program</div>
-                    <div class="cert-date">2025</div>
-                    <span class="cert-status">Completed</span>
-                    <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:4px;">40-hour training program covering Android and iOS security testing.</p>
+                <div class="col-md-6 col-lg-4">
+                    <div class="cert-card">
+                        <div class="cert-icon">📱</div>
+                        <h6>Mobile Pentesting</h6>
+                        <p class="cert-issuer">Mobile Penetration Testing Certification</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> 2025</p>
+                        <p class="cert-status"><span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;">✅ Certified</span></p>
+                    </div>
                 </div>
 
-                <!-- Red Team Course -->
-                <div class="cert-item">
-                    <div class="cert-name">Red Team Course</div>
-                    <div class="cert-org">Training Program</div>
-                    <div class="cert-date">2025</div>
-                    <span class="cert-status">Completed</span>
-                    <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:4px;">60-hour course covering Red Team methodologies and advanced offensive techniques.</p>
+                <!-- AI IDS/IPS -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="cert-card">
+                        <div class="cert-icon">🤖</div>
+                        <h6>AI IDS/IPS</h6>
+                        <p class="cert-issuer">AI-based IDS/IPS Security — Huawei & HIT</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> 2026</p>
+                        <p class="cert-status"><span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;">✅ Certified</span></p>
+                    </div>
                 </div>
 
-                <!-- Huawei Project -->
-                <div class="cert-item">
-                    <div class="cert-name">Huawei AI-Based IDS/IPS Project</div>
-                    <div class="cert-org">Huawei & HIT</div>
-                    <div class="cert-date">2026</div>
-                    <span class="cert-status">Completed</span>
-                    <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:4px;">Collaborative project focused on building AI-driven threat detection systems.</p>
+                <!-- ICIP -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="cert-card">
+                        <div class="cert-icon">🏭</div>
+                        <h6>ICIP</h6>
+                        <p class="cert-issuer">Introduction to Critical Infrastructure Protection</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> 2026</p>
+                        <p class="cert-status"><span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;">✅ Certified</span></p>
+                    </div>
                 </div>
 
-                <!-- TryHackMe -->
-                <div class="cert-item">
-                    <div class="cert-name">TryHackMe — Level 8 Hacker</div>
-                    <div class="cert-org">TryHackMe</div>
-                    <div class="cert-date">2025-2026</div>
-                    <span class="cert-status">Active</span>
-                    <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:4px;">Completed 41+ rooms, ranked in the Top 15% of users.</p>
+                <!-- GenAI -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="cert-card">
+                        <div class="cert-icon">🧠</div>
+                        <h6>Generative AI</h6>
+                        <p class="cert-issuer">Introduction to Generative AI — Google Cloud</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> 2026</p>
+                        <p class="cert-status"><span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;">✅ Certified</span></p>
+                    </div>
                 </div>
 
             </div>
@@ -149,16 +122,11 @@
     <!-- ===== Footer ===== -->
     <footer class="footer">
         <div class="container">
-            <div class="social-links">
-                <a href="https://github.com/milesmaro2006-dev" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/amr-shaban-2465153a6" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://tryhackme.com/p/Amrshaban2006" target="_blank"><i class="fas fa-user-secret"></i></a>
-                <a href="mailto:[your-email]"><i class="fas fa-envelope"></i></a>
-            </div>
-            <p>&copy; 2026 Amr Shaban Sayed. Built with <span class="heart">❤</span> for Offensive Security.</p>
+            <p class="mb-0">&copy; 2026 Amr Shaban Sayed. Built with <i class="fas fa-heart" style="color:#00ff41;"></i> for Offensive Security.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
