@@ -1,111 +1,47 @@
 <!DOCTYPE html>
-<html lang="ar" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certifications | Amr Shaban</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <!-- ===== Navigation ===== -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Amr<span>Shaban</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <a href="index.html" class="logo">Amr<span>Shaban</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="writeups.html">Write-ups</a></li>
+                <li><a href="certifications.html" class="active">Certifications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="writeups.html">Write-ups</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="certifications.html">Certifications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
         </div>
     </nav>
 
     <!-- ===== Certifications Section ===== -->
-    <section class="hero" style="min-height:60vh;">
+    <section class="section" style="padding-top:120px;">
         <div class="container">
-            <h1 class="section-title">My <span class="highlight">Certifications</span></h1>
+            <span class="section-label">Credentials</span>
+            <h2 class="section-title">My <span class="highlight">Certifications</span></h2>
             <p class="section-subtitle">Professional certifications validating my cybersecurity skills.</p>
 
-            <div class="row g-4 mt-3">
-                <!-- OSCP -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="cert-card">
-                        <div class="cert-icon">🔴</div>
-                        <h6>OSCP</h6>
-                        <p class="cert-date">Offensive Security Certified Professional</p>
-                        <p class="cert-date">2024</p>
-                    </div>
-                </div>
-
-                <!-- CEH -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="cert-card">
-                        <div class="cert-icon">🟢</div>
-                        <h6>CEH</h6>
-                        <p class="cert-date">Certified Ethical Hacker</p>
-                        <p class="cert-date">2024</p>
-                    </div>
-                </div>
-
-                <!-- OPSWAT -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="cert-card">
-                        <div class="cert-icon">🔵</div>
-                        <h6>OPSWAT</h6>
-                        <p class="cert-date">Cybersecurity Fundamentals (Associate)</p>
-                        <p class="cert-date">2025</p>
-                    </div>
-                </div>
-
-                <!-- Mobile Pentesting -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="cert-card">
-                        <div class="cert-icon">📱</div>
-                        <h6>Mobile Pentesting</h6>
-                        <p class="cert-date">Mobile Penetration Testing Certification</p>
-                        <p class="cert-date">2025</p>
-                    </div>
-                </div>
-
-                <!-- AI IDS/IPS -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="cert-card">
-                        <div class="cert-icon">🤖</div>
-                        <h6>AI IDS/IPS</h6>
-                        <p class="cert-date">AI-based IDS/IPS Security Certification</p>
-                        <p class="cert-date">2026</p>
-                    </div>
-                </div>
-
-                <!-- ICIP -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="cert-card">
-                        <div class="cert-icon">🏭</div>
-                        <h6>ICIP</h6>
-                        <p class="cert-date">Introduction to Critical Infrastructure Protection</p>
-                        <p class="cert-date">2026</p>
-                    </div>
-                </div>
-
-                <!-- GenAI -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="cert-card">
-                        <div class="cert-icon">🧠</div>
-                        <h6>Generative AI</h6>
-                        <p class="cert-date">Introduction to Generative AI</p>
-                        <p class="cert-date">2026</p>
-                    </div>
-                </div>
+            <div class="certs-grid" style="margin-top:40px;">
+                <div class="cert-card"><div class="cert-icon">🔴</div><h6>OSCP</h6><div class="cert-org">Offensive Security • 2024</div></div>
+                <div class="cert-card"><div class="cert-icon">🟢</div><h6>CEH</h6><div class="cert-org">EC-Council • 2024</div></div>
+                <div class="cert-card"><div class="cert-icon">🔵</div><h6>OPSWAT</h6><div class="cert-org">Cybersecurity Fundamentals • 2025</div></div>
+                <div class="cert-card"><div class="cert-icon">📱</div><h6>Mobile Pentesting</h6><div class="cert-org">2025</div></div>
+                <div class="cert-card"><div class="cert-icon">🤖</div><h6>AI IDS/IPS</h6><div class="cert-org">Huawei & HIT • 2026</div></div>
+                <div class="cert-card"><div class="cert-icon">🏭</div><h6>ICIP</h6><div class="cert-org">Critical Infrastructure • 2026</div></div>
+                <div class="cert-card"><div class="cert-icon">🧠</div><h6>Generative AI</h6><div class="cert-org">Google Cloud • 2026</div></div>
             </div>
         </div>
     </section>
@@ -113,11 +49,16 @@
     <!-- ===== Footer ===== -->
     <footer class="footer">
         <div class="container">
-            <p class="mb-0">&copy; 2026 Amr Shaban. Built with <i class="fas fa-heart" style="color:#00ff41;"></i> for Offensive Security.</p>
+            <div class="social-links">
+                <a href="https://github.com/milesmaro2006-dev" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/amr-shaban-2465153a6" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://tryhackme.com/p/Amrshaban2006" target="_blank"><i class="fas fa-user-secret"></i></a>
+                <a href="mailto:[your-email]"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2026 Amr Shaban. Built with <span class="heart">❤</span> for Offensive Security.</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
-</html>
+    </html>
