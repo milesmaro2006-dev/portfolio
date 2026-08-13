@@ -30,47 +30,6 @@ This is my **professional cybersecurity portfolio** showcasing my journey as a *
 
 ---
 
-## 📁 Portfolio Structure
-
-```
-
-portfolio/
-├── index.html                 # Home page
-├── about.html                 # About me & skills
-├── projects.html              # Project gallery
-├── project-spiderforge.html   # SpiderForge details
-├── project-neurosnare.html    # NeuroSnare details
-├── project-aetherops.html     # AetherOps details
-├── project-huawei.html        # Huawei IDS/IPS details
-├── project-elitegym.html      # Elite Gym System details
-├── writeups.html              # Security write-ups
-├── certifications.html        # Certifications & training
-├── tools.html                 # Tools & technologies
-├── contact.html               # Contact information
-├── css/
-│   └── style.css              # Main stylesheet
-├── js/
-│   └── main.js                # JavaScript functionality
-└── assets/
-├── images/                # Portfolio images
-└── files/
-└── Amr-Shaban-CV.pdf  # Downloadable CV
-
-```
-
----
-
-## 🛠️ Technologies Used
-
-| Category | Technologies |
-|----------|--------------|
-| **Frontend** | HTML5, CSS3, JavaScript |
-| **Styling** | Custom CSS, Flexbox, Grid |
-| **Icons** | Font Awesome |
-| **Hosting** | GitHub Pages |
-
----
-
 ## 🎯 Projects Featured
 
 | # | Project | Description |
@@ -82,16 +41,6 @@ portfolio/
 | 5 | **Elite Gym System** | Software/Database Project |
 
 ---
-
-## 📊 TryHackMe Progress
-
-```
-
-🏆 Level: 8 — HACKER
-📚 Rooms Completed: 41
-📈 Rank: Top 15%
-
-```
 
 🔗 **[View TryHackMe Profile](https://tryhackme.com/p/Amrshaban2006)**
 
