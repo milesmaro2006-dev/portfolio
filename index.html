@@ -1,87 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amr Shaban Sayed | Cybersecurity Student | Junior Penetration Tester</title>
-    <meta name="description" content="Cybersecurity student focused on offensive security, penetration testing, security automation, and hands-on security research across web, API, mobile, and network environments.">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Amr Shaban | Junior Penetration Tester</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <!-- ===== Navigation ===== -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a href="index.html" class="logo">Amr<span>Shaban</span></a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="writeups.html">Write-ups</a></li>
-                <li><a href="certifications.html">Certifications</a></li>
-                <li><a href="tools.html">Tools</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
+            <a class="navbar-brand" href="index.html">Amr<span>Shaban</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="writeups.html">Write-ups</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- ===== Hero Section ===== -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge fade-up">🔐 Open to Opportunities</div>
-                <h1 class="fade-up delay-1">Amr <span class="highlight">Shaban</span> Sayed</h1>
-                <p class="subtitle fade-up delay-2">Cybersecurity Student | Junior Penetration Tester</p>
-                <p class="subtitle-2 fade-up delay-2" style="font-size:0.95rem;color:var(--text-secondary);max-width:600px;">
-                    Cybersecurity student focused on offensive security, penetration testing, security automation, 
-                    and hands-on security research across web, API, mobile, and network environments.
-                </p>
-
-                <div class="badge-group fade-up delay-3">
-                    <span class="badge highlight">OSCP Preparation</span>
-                    <span class="badge highlight">CEH Training</span>
-                    <span class="badge">Web Security</span>
-                    <span class="badge">API Security</span>
-                    <span class="badge">Mobile Security</span>
-                    <span class="badge">Network Security</span>
-                    <span class="badge">Python Automation</span>
-                    <span class="badge">TryHackMe Level 8</span>
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="badge-open mb-3">
+                        <span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;padding:0.5rem 1rem;">
+                            <i class="fas fa-circle" style="color:#00ff41;font-size:0.7rem;"></i> Open to Opportunities
+                        </span>
+                    </div>
+                    <h1>Amr <span class="highlight">Shaban</span> Sayed</h1>
+                    <p class="subtitle">Cybersecurity Student | Junior Penetration Tester</p>
+                    <p class="description">
+                        Cybersecurity student focused on offensive security, penetration testing, security automation, and hands-on security research across web, API, mobile, and network environments.
+                    </p>
+                    <div class="badge-group">
+                        <span class="badge">Web Security</span>
+                        <span class="badge">API Security</span>
+                        <span class="badge">Mobile Security</span>
+                        <span class="badge">Network Security</span>
+                        <span class="badge">Python Automation</span>
+                        <span class="badge">TryHackMe Level 8</span>
+                    </div>
+                    <div class="btn-group-custom mt-3">
+                        <a href="projects.html" class="btn btn-primary-custom">
+                            <i class="fas fa-code"></i> View Projects
+                        </a>
+                        <a href="writeups.html" class="btn btn-outline-custom">
+                            <i class="fas fa-pen"></i> View Write-ups
+                        </a>
+                        <a href="https://github.com/milesmaro2006-dev" target="_blank" class="btn btn-outline-custom">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/amr-shaban-2465153a6" target="_blank" class="btn btn-outline-custom">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://tryhackme.com/p/Amrshaban2006" target="_blank" class="btn btn-outline-custom">
+                            <i class="fas fa-user-secret"></i> TryHackMe
+                        </a>
+                        <a href="assets/files/Amr-Shaban-CV.pdf" class="btn btn-primary-custom" download>
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                    </div>
                 </div>
+                <div class="col-lg-4 text-center d-none d-lg-block">
+                    <div class="terminal">
+                        <pre style="color:#00ff41;font-size:0.8rem;background:#0d0d0d;padding:1rem;border-radius:8px;border:1px solid #00ff4133;">
+$ whoami
+Amr Shaban Sayed
+— OSCP Certified | Junior Penetration Tester
 
-                <div class="btn-group fade-up delay-4">
-                    <a href="projects.html" class="btn-primary"><i class="fas fa-code"></i> View Projects</a>
-                    <a href="writeups.html" class="btn-outline"><i class="fas fa-pen"></i> Write-ups</a>
-                    <a href="https://github.com/milesmaro2006-dev" target="_blank" class="btn-outline"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://www.linkedin.com/in/amr-shaban-2465153a6" target="_blank" class="btn-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="https://tryhackme.com/p/Amrshaban2006" target="_blank" class="btn-outline"><i class="fas fa-user-secret"></i> TryHackMe</a>
-                    <a href="assets/files/Amr-Shaban-CV.pdf" download class="btn-primary"><i class="fas fa-download"></i> Download CV</a>
-                </div>
+$ cat skills.txt
+Web Security • API Security
+Mobile Security • Network Security
 
-                <!-- Terminal Element (خفيض) -->
-                <div class="terminal fade-up delay-4">
-                    <div class="line"><span class="prompt">$</span><span class="cmd"> whoami</span></div>
-                    <div class="line"><span class="output">Amr Shaban Sayed — OSCP Preparation | Junior Penetration Tester</span></div>
-                    <div class="line"><span class="prompt">$</span><span class="cmd"> cat skills.txt</span></div>
-                    <div class="line"><span class="output">Web Security • API Security • Mobile Security • Network Security</span></div>
-                    <div class="line"><span class="prompt">$</span><span class="cmd"> ./status.sh</span></div>
-                    <div class="line"><span class="output">🟢 Ready for challenges • Open to opportunities</span></div>
+$ ./status.sh
+🟢 Ready for challenges • Open to opportunities
+                        </pre>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- ===== Quick Stats ===== -->
-    <section class="section" style="background:var(--bg-secondary);padding:60px 0;">
-        <div class="container">
-            <div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;text-align:center;">
-                <div class="stat-item"><div class="number" style="font-size:2rem;font-weight:800;color:var(--accent);">8</div><div class="label" style="color:var(--text-secondary);font-size:0.9rem;">TryHackMe Level</div></div>
-                <div class="stat-item"><div class="number" style="font-size:2rem;font-weight:800;color:var(--accent);">41</div><div class="label" style="color:var(--text-secondary);font-size:0.9rem;">Rooms Completed</div></div>
-                <div class="stat-item"><div class="number" style="font-size:2rem;font-weight:800;color:var(--accent);">15%</div><div class="label" style="color:var(--text-secondary);font-size:0.9rem;">Top Rank</div></div>
-                <div class="stat-item"><div class="number" style="font-size:2rem;font-weight:800;color:var(--accent);">5</div><div class="label" style="color:var(--text-secondary);font-size:0.9rem;">Security Projects</div></div>
+            <!-- ===== Stats ===== -->
+            <div class="row stats-row mt-5">
+                <div class="col-md-3 col-6 text-center">
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">TryHackMe Level</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center">
+                    <div class="stat-item">
+                        <span class="stat-number">41+</span>
+                        <span class="stat-label">Rooms Completed</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center">
+                    <div class="stat-item">
+                        <span class="stat-number">Top 15%</span>
+                        <span class="stat-label">Rank</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center">
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Security Projects</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -89,16 +128,18 @@
     <!-- ===== Footer ===== -->
     <footer class="footer">
         <div class="container">
-            <div class="social-links">
+            <p class="mb-0">
+                &copy; 2026 Amr Shaban Sayed. Built with <i class="fas fa-heart" style="color:#00ff41;"></i> for Offensive Security.
+            </p>
+            <div class="mt-2">
                 <a href="https://github.com/milesmaro2006-dev" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/amr-shaban-2465153a6" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://tryhackme.com/p/Amrshaban2006" target="_blank"><i class="fas fa-user-secret"></i></a>
-                <a href="mailto:[your-email]"><i class="fas fa-envelope"></i></a>
             </div>
-            <p>&copy; 2026 Amr Shaban Sayed. Built with <span class="heart">❤</span> for Offensive Security.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
