@@ -1,73 +1,120 @@
 <!DOCTYPE html>
-<html lang="ar" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Amr Shaban</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- ===== Navigation (نفس اللي في index) ===== -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <!-- ===== Navigation ===== -->
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Amr<span>Shaban</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <a href="index.html" class="logo">Amr<span>Shaban</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="writeups.html">Write-ups</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="writeups.html">Write-ups</a></li>
-                    <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
         </div>
     </nav>
 
     <!-- ===== About Section ===== -->
-    <section class="hero" style="min-height:60vh;">
+    <section class="section" style="padding-top:120px;">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h1>About <span class="highlight">Me</span></h1>
-                    <p class="subtitle" style="font-size:1.2rem;">
-                        Cybersecurity student passionate about Penetration Testing, Web Security,
-                        Mobile Security, Red Teaming, and Security Automation.
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="section-label">About Me</span>
+                    <h2 class="section-title">Who <span class="highlight">I Am</span></h2>
+                    <p>
+                        I'm <strong>Amr Shaban</strong>, an <strong>OSCP-certified</strong> Cybersecurity professional
+                        specializing in <strong>Offensive Security</strong> and <strong>Red Teaming</strong>.
                     </p>
-                    <hr style="border-color:#00ff4133;width:100px;margin:2rem 0;">
-                    <div style="color:#b0b0b0;font-size:1.05rem;line-height:1.8;">
-                        <p>
-                            I'm <strong>Amr Shaban</strong>, an OSCP-certified Cybersecurity professional
-                            specializing in Offensive Security and Red Teaming.
-                        </p>
-                        <p>
-                            I have hands-on experience in <strong>Web Application Penetration Testing</strong>,
-                            <strong>Mobile Security</strong>, and <strong>Hardware Security</strong>.
-                            I'm passionate about building security automation tools like
-                            <strong>SpiderForge</strong> (Web Security Assessment Platform) and
-                            <strong>NeuroSnare</strong> (AI-Powered IDS/IPS).
-                        </p>
-                        <p>
-                            I'm currently pursuing a Bachelor's degree in Computers and Information
-                            at the Higher Technological Institute (HTI) - Heliopolis, expected to graduate in 2029.
-                        </p>
-                        <div class="mt-4">
-                            <span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;padding:0.5rem 1rem;margin:0.2rem;">
-                                <i class="fas fa-certificate"></i> OSCP
-                            </span>
-                            <span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;padding:0.5rem 1rem;margin:0.2rem;">
-                                <i class="fas fa-certificate"></i> CEH
-                            </span>
-                            <span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;padding:0.5rem 1rem;margin:0.2rem;">
-                                <i class="fas fa-trophy"></i> TryHackMe Level 8
-                            </span>
-                        </div>
+                    <p>
+                        I have hands-on experience in <strong>Web Application Penetration Testing</strong>,
+                        <strong>Mobile Security</strong>, and <strong>Hardware Security</strong>.
+                        I'm passionate about building security automation tools like
+                        <strong>SpiderForge</strong> (Web Security Assessment Platform) and
+                        <strong>NeuroSnare</strong> (AI-Powered IDS/IPS).
+                    </p>
+                    <p>
+                        I'm currently pursuing a Bachelor's degree in Computers and Information
+                        at the Higher Technological Institute (HTI) - Heliopolis,
+                        expected to graduate in <strong>2029</strong>.
+                    </p>
+                    <p>
+                        My goal is to continuously improve my offensive security skills and
+                        contribute to making the digital world more secure.
+                    </p>
+                    <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:8px;">
+                        <span class="badge" style="background:var(--accent-dim);color:var(--accent);padding:6px 16px;border-radius:20px;border:1px solid var(--accent);">OSCP</span>
+                        <span class="badge" style="background:var(--accent-dim);color:var(--accent);padding:6px 16px;border-radius:20px;border:1px solid var(--accent);">CEH</span>
+                        <span class="badge" style="background:var(--bg-card);color:var(--text-secondary);padding:6px 16px;border-radius:20px;border:1px solid var(--border);">TryHackMe Level 8</span>
+                    </div>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-card"><div class="number">41</div><div class="label">TryHackMe Rooms</div></div>
+                    <div class="stat-card"><div class="number">8</div><div class="label">THM Level</div></div>
+                    <div class="stat-card"><div class="number">15%</div><div class="label">Top Rank</div></div>
+                    <div class="stat-card"><div class="number">5</div><div class="label">Projects</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Skills Section ===== -->
+    <section class="section" style="background:var(--bg-secondary);">
+        <div class="container">
+            <span class="section-label">Expertise</span>
+            <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+            <p class="section-subtitle">Technologies and tools I work with.</p>
+
+            <div class="skills-grid" style="margin-top:40px;">
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h5>Web & Mobile Security</h5>
+                    <div class="skill-tags">
+                        <span>OWASP Top 10</span>
+                        <span>API Security</span>
+                        <span>Authentication</span>
+                        <span>Injection</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔧</div>
+                    <h5>Security Tools</h5>
+                    <div class="skill-tags">
+                        <span>Burp Suite</span>
+                        <span>Nmap</span>
+                        <span>Metasploit</span>
+                        <span>Wireshark</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🐍</div>
+                    <h5>Programming & Automation</h5>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>Security Automation</span>
+                        <span>Bash</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🖥️</div>
+                    <h5>Networking</h5>
+                    <div class="skill-tags">
+                        <span>TCP/IP</span>
+                        <span>Linux</span>
+                        <span>Packet Analysis</span>
                     </div>
                 </div>
             </div>
@@ -77,11 +124,16 @@
     <!-- ===== Footer ===== -->
     <footer class="footer">
         <div class="container">
-            <p class="mb-0">&copy; 2026 Amr Shaban. Built with <i class="fas fa-heart" style="color:#00ff41;"></i> for Offensive Security.</p>
+            <div class="social-links">
+                <a href="https://github.com/milesmaro2006-dev" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/amr-shaban-2465153a6" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://tryhackme.com/p/Amrshaban2006" target="_blank"><i class="fas fa-user-secret"></i></a>
+                <a href="mailto:[your-email]"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2026 Amr Shaban. Built with <span class="heart">❤</span> for Offensive Security.</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
-</html>
+    </html>
