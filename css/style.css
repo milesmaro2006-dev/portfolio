@@ -1,16 +1,16 @@
 :root {
-    --bg-main: #06090e;
-    --bg-card: #0c1322;
-    --bg-card-hover: #111a2f;
-    --border-color: #1e293b;
-    --border-hover: #38bdf8;
-    --text-main: #f1f5f9;
-    --text-muted: #94a3b8;
-    --text-dim: #64748b;
-    --accent: #38bdf8;
-    --accent-glow: rgba(56, 189, 248, 0.15);
-    --navy-highlight: #1e3a8a;
-    --radius: 8px;
+    --bg-base: #07090e;
+    --bg-surface: #0e131f;
+    --bg-surface-elevated: #141b2d;
+    --border-subtle: #1e293b;
+    --border-active: #3b82f6;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --cyan-accent: #38bdf8;
+    --blue-accent: #2563eb;
+    --radius-md: 10px;
+    --radius-sm: 6px;
 }
 
 * {
@@ -20,53 +20,47 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: var(--bg-main);
-    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
     line-height: 1.6;
-    font-display: swap;
     overflow-x: hidden;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(56, 189, 248, 0.05) 0px, transparent 50%);
+    background-attachment: fixed;
 }
 
 /* Scrollbar */
-::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-track {
-    background: var(--bg-main);
-}
-::-webkit-scrollbar-thumb {
-    background: #1e293b;
-    border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: var(--accent);
-}
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--blue-accent); }
 
-/* Navbar */
+/* Navigation */
 .navbar {
-    background-color: rgba(6, 9, 14, 0.85) !important;
-    border-bottom: 1px solid var(--border-color);
-    padding: 0.9rem 0;
-    backdrop-filter: blur(12px);
+    background: rgba(7, 9, 14, 0.85) !important;
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 1rem 0;
 }
 
 .navbar-brand {
-    color: #ffffff !important;
-    font-weight: 700;
     font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff !important;
     letter-spacing: -0.5px;
 }
 
 .navbar-brand span {
-    color: var(--accent);
+    color: var(--cyan-accent);
 }
 
 .nav-link {
-    color: var(--text-muted) !important;
+    color: var(--text-secondary) !important;
     font-size: 0.9rem;
     font-weight: 500;
-    padding: 0.5rem 0.9rem !important;
+    padding: 0.5rem 1rem !important;
     transition: color 0.2s ease;
 }
 
@@ -79,192 +73,177 @@ body {
     min-height: 85vh;
     display: flex;
     align-items: center;
-    padding: 7rem 0 4rem;
-    background: radial-gradient(circle at top right, #0f1c3f 0%, transparent 60%);
+    padding: 8rem 0 5rem;
 }
 
-.badge-status {
+.status-pill {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(56, 189, 248, 0.08);
-    color: var(--accent);
-    border: 1px solid rgba(56, 189, 248, 0.25);
-    padding: 0.35rem 0.9rem;
+    background: rgba(37, 99, 235, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 0.4rem 0.9rem;
+    border-radius: 50px;
     font-size: 0.8rem;
-    font-weight: 600;
-    border-radius: 20px;
+    color: var(--cyan-accent);
+    font-weight: 500;
 }
 
-.badge-status .status-dot {
-    width: 7px;
-    height: 7px;
-    background: var(--accent);
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--cyan-accent);
     border-radius: 50%;
-    box-shadow: 0 0 8px var(--accent);
+    box-shadow: 0 0 8px var(--cyan-accent);
 }
 
 .hero h1 {
-    font-size: 3.2rem;
+    font-size: 3.5rem;
     font-weight: 800;
-    letter-spacing: -1px;
-    line-height: 1.15;
-    margin-top: 1rem;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin: 1.2rem 0 0.8rem;
     color: #ffffff;
 }
 
-.hero .subtitle {
-    font-size: 1.25rem;
-    color: var(--accent);
+.hero .role-title {
+    font-size: 1.35rem;
+    color: var(--cyan-accent);
     font-weight: 600;
-    margin-top: 0.6rem;
+    letter-spacing: -0.3px;
 }
 
-.hero .description {
+.hero .bio {
     font-size: 1.05rem;
-    color: var(--text-muted);
-    max-width: 650px;
-    margin: 1.2rem 0 1.8rem;
+    color: var(--text-secondary);
+    max-width: 620px;
+    margin: 1.2rem 0 2rem;
 }
+
+/* Terminal Console Box */
+.terminal-box {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.terminal-header {
+    background: #090d16;
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.terminal-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #1e293b;
+}
+
+.terminal-body {
+    padding: 1.25rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.t-key { color: var(--cyan-accent); font-weight: 600; }
+.t-val { color: #ffffff; }
+.t-comment { color: var(--text-muted); }
 
 /* Buttons */
-.btn-group-custom {
+.action-group {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
 }
 
-.btn-primary-custom {
-    background: var(--accent);
-    color: #030712;
+.btn-solid {
+    background: var(--text-primary);
+    color: var(--bg-base);
     font-weight: 600;
     font-size: 0.9rem;
-    padding: 0.65rem 1.3rem;
-    border-radius: var(--radius);
-    border: none;
-    transition: all 0.2s ease;
+    padding: 0.7rem 1.4rem;
+    border-radius: var(--radius-sm);
     text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
 }
 
-.btn-primary-custom:hover {
-    background: #7dd3fc;
-    box-shadow: 0 4px 15px var(--accent-glow);
-    color: #030712;
+.btn-solid:hover {
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+    color: #000000;
+    transform: translateY(-1px);
 }
 
-.btn-outline-custom {
+.btn-outline {
     background: transparent;
-    color: var(--text-main);
+    color: var(--text-primary);
     font-weight: 500;
     font-size: 0.9rem;
-    padding: 0.65rem 1.3rem;
-    border-radius: var(--radius);
-    border: 1px solid var(--border-color);
-    transition: all 0.2s ease;
+    padding: 0.7rem 1.4rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-subtle);
     text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
 }
 
-.btn-outline-custom:hover {
-    border-color: var(--text-muted);
-    background: rgba(255, 255, 255, 0.03);
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: var(--text-secondary);
     color: #ffffff;
+    transform: translateY(-1px);
 }
 
-/* Terminal & Code Blocks */
-.terminal {
-    background: #080d1a;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius);
-    padding: 1.25rem;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    font-size: 0.85rem;
-    line-height: 1.7;
-    color: var(--text-muted);
+/* Metrics Dashboard Strip */
+.metrics-strip {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-subtle);
 }
 
-.terminal .t-user { color: var(--accent); }
-.terminal .t-val { color: #f8fafc; font-weight: 500; }
-.terminal .t-dim { color: var(--text-dim); }
-
-/* Stats Bar */
-.stats-row {
-    margin-top: 3.5rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color);
+.metric-card {
+    padding: 1rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: border-color 0.2s ease;
 }
 
-.stat-item .stat-number {
+.metric-card:hover {
+    border-color: var(--border-active);
+}
+
+.metric-value {
     font-size: 2.2rem;
     font-weight: 800;
     color: #ffffff;
     letter-spacing: -0.5px;
 }
 
-.stat-item .stat-label {
-    font-size: 0.82rem;
-    color: var(--text-dim);
+.metric-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.5px;
-}
-
-/* Cards & Grid */
-.card-custom, .project-card, .cert-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius);
-    padding: 1.5rem;
-    height: 100%;
-    transition: border-color 0.2s, transform 0.2s;
-}
-
-.card-custom:hover, .project-card:hover, .cert-card:hover {
-    border-color: var(--border-hover);
-    transform: translateY(-3px);
-}
-
-.tech-tag {
-    display: inline-block;
-    background: rgba(30, 41, 59, 0.6);
-    color: var(--text-muted);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    font-size: 0.75rem;
-    padding: 0.2rem 0.65rem;
-    border-radius: 4px;
-    margin: 0.2rem 0.15rem;
-}
-
-/* Section Title */
-.section-title {
-    font-size: 2.2rem;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    margin-bottom: 0.4rem;
-}
-
-.section-subtitle {
-    color: var(--text-muted);
-    font-size: 1rem;
-    margin-bottom: 2rem;
-}
-
-/* Experience Timeline Cards */
-.exp-card {
-    background: var(--bg-card);
-    border-left: 3px solid var(--accent);
-    border-radius: 0 var(--radius) var(--radius) 0;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-top: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
+    margin-top: 0.3rem;
 }
 
 /* Footer */
 .footer {
-    border-top: 1px solid var(--border-color);
     padding: 2.5rem 0;
-    background: #04060a;
-    color: var(--text-dim);
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-muted);
     font-size: 0.85rem;
+    background: #04060a;
 }
