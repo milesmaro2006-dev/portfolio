@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certifications | Amr Shaban</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></noscript>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ===== Navigation ===== -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">Amr<span>Shaban</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="writeups.html">Write-ups</a></li>
                     <li class="nav-item"><a class="nav-link active" href="certifications.html">Certifications</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -30,88 +30,64 @@
         </div>
     </nav>
 
-    <!-- ===== Certifications Section ===== -->
-    <section class="hero" style="min-height:60vh;">
+    <section class="hero" style="min-height:75vh;">
         <div class="container">
-            <h1 class="section-title">Certifications <span class="highlight">& Training</span></h1>
-            <p class="section-subtitle">Professional certifications and training validating cybersecurity skills.</p>
+            <h1 class="section-title">Credentials & Certifications</h1>
+            <p class="section-subtitle">Validated qualifications across offensive penetration testing, AI security, and infrastructure defense.</p>
 
-            <div class="row g-4 mt-3">
+            <div class="row g-4">
 
-                <!-- OSCP -->
+                <!-- Huawei -->
                 <div class="col-md-6 col-lg-4">
                     <div class="cert-card">
-                        <div class="cert-icon">🔴</div>
-                        <h6>OSCP</h6>
-                        <p class="cert-issuer">Offensive Security Certified Professional</p>
-                        <p class="cert-date"><i class="fas fa-calendar"></i> 2024</p>
-                        <p class="cert-status"><span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;">✅ Certified</span></p>
+                        <h5 style="color:#ffffff;">AI-Based IDS/IPS Security</h5>
+                        <p style="color:var(--accent); font-size:0.85rem;">Huawei & HIT (2026)</p>
+                        <p style="color:var(--text-dim); font-size:0.8rem;">Deep packet analysis and AI threat mitigation credential.</p>
                     </div>
                 </div>
 
-                <!-- CEH -->
+                <!-- Google GenAI -->
                 <div class="col-md-6 col-lg-4">
                     <div class="cert-card">
-                        <div class="cert-icon">🟢</div>
-                        <h6>CEH</h6>
-                        <p class="cert-issuer">Certified Ethical Hacker</p>
-                        <p class="cert-date"><i class="fas fa-calendar"></i> 2024</p>
-                        <p class="cert-status"><span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;">✅ Certified</span></p>
+                        <h5 style="color:#ffffff;">Introduction to Generative AI</h5>
+                        <p style="color:var(--accent); font-size:0.85rem;">Google Cloud (2026)</p>
+                        <p style="color:var(--text-dim); font-size:0.8rem;">Foundational training in LLM architectures and neural pipelines.</p>
                     </div>
                 </div>
 
                 <!-- OPSWAT -->
                 <div class="col-md-6 col-lg-4">
                     <div class="cert-card">
-                        <div class="cert-icon">🔵</div>
-                        <h6>OPSWAT</h6>
-                        <p class="cert-issuer">Cybersecurity Fundamentals (Associate)</p>
-                        <p class="cert-date"><i class="fas fa-calendar"></i> 2025</p>
-                        <p class="cert-status"><span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;">✅ Certified</span></p>
-                    </div>
-                </div>
-
-                <!-- Mobile Pentesting -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="cert-card">
-                        <div class="cert-icon">📱</div>
-                        <h6>Mobile Pentesting</h6>
-                        <p class="cert-issuer">Mobile Penetration Testing Certification</p>
-                        <p class="cert-date"><i class="fas fa-calendar"></i> 2025</p>
-                        <p class="cert-status"><span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;">✅ Certified</span></p>
-                    </div>
-                </div>
-
-                <!-- AI IDS/IPS -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="cert-card">
-                        <div class="cert-icon">🤖</div>
-                        <h6>AI IDS/IPS</h6>
-                        <p class="cert-issuer">AI-based IDS/IPS Security — Huawei & HIT</p>
-                        <p class="cert-date"><i class="fas fa-calendar"></i> 2026</p>
-                        <p class="cert-status"><span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;">✅ Certified</span></p>
+                        <h5 style="color:#ffffff;">Cybersecurity Fundamentals (Associate)</h5>
+                        <p style="color:var(--accent); font-size:0.85rem;">OPSWAT Academy (2025)</p>
+                        <p style="color:var(--text-dim); font-size:0.8rem;">Critical network security and zero-trust data sanitization.</p>
                     </div>
                 </div>
 
                 <!-- ICIP -->
                 <div class="col-md-6 col-lg-4">
                     <div class="cert-card">
-                        <div class="cert-icon">🏭</div>
-                        <h6>ICIP</h6>
-                        <p class="cert-issuer">Introduction to Critical Infrastructure Protection</p>
-                        <p class="cert-date"><i class="fas fa-calendar"></i> 2026</p>
-                        <p class="cert-status"><span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;">✅ Certified</span></p>
+                        <h5 style="color:#ffffff;">Intro to Critical Infrastructure (ICIP)</h5>
+                        <p style="color:var(--accent); font-size:0.85rem;">OPSWAT Academy (2025)</p>
+                        <p style="color:var(--text-dim); font-size:0.8rem;">SCADA/ICS perimeter protection and threat intelligence.</p>
                     </div>
                 </div>
 
-                <!-- GenAI -->
+                <!-- Mobile Pentesting -->
                 <div class="col-md-6 col-lg-4">
                     <div class="cert-card">
-                        <div class="cert-icon">🧠</div>
-                        <h6>Generative AI</h6>
-                        <p class="cert-issuer">Introduction to Generative AI — Google Cloud</p>
-                        <p class="cert-date"><i class="fas fa-calendar"></i> 2026</p>
-                        <p class="cert-status"><span class="badge" style="background:#00ff4122;color:#00ff41;border:1px solid #00ff41;">✅ Certified</span></p>
+                        <h5 style="color:#ffffff;">Mobile Penetration Testing</h5>
+                        <p style="color:var(--accent); font-size:0.85rem;">Edux Academy (2025)</p>
+                        <p style="color:var(--text-dim); font-size:0.8rem;">40-hour hands-on Android security auditing and static analysis.</p>
+                    </div>
+                </div>
+
+                <!-- OSCP Prep -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="cert-card">
+                        <h5 style="color:#ffffff;">OSCP Preparation / Offensive Security</h5>
+                        <p style="color:var(--accent); font-size:0.85rem;">Edux Academy (2025)</p>
+                        <p style="color:var(--text-dim); font-size:0.8rem;">Rigorous privilege escalation, pivoting, and exploitation training.</p>
                     </div>
                 </div>
 
@@ -119,14 +95,13 @@
         </div>
     </section>
 
-    <!-- ===== Footer ===== -->
-    <footer class="footer">
+    <footer class="footer text-center">
         <div class="container">
-            <p class="mb-0">&copy; 2026 Amr Shaban Sayed. Built with <i class="fas fa-heart" style="color:#00ff41;"></i> for Offensive Security.</p>
+            <p class="mb-0">&copy; 2026 Amr Shaban Sayed. Built for performance and reliability.</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
